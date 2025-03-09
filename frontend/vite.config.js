@@ -1,14 +1,10 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  css: {
-    preprocessorOptions: {
-      css: {
-        additionalData: '@import "./src/output.css";',
-      },
-    },
-  },
+  base: "./", // Ensures proper asset loading on Vercel
+  build: {
+    outDir: "dist", // Ensures the output folder matches Vercel config
+  }
 });

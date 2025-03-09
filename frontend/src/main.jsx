@@ -4,6 +4,8 @@ import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import { SnackbarProvider } from 'notistack'
+import './output.css';
+
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
